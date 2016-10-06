@@ -21,6 +21,13 @@ when building these, use the 2 database servers for your database connections.
 
 - 2 back end servers, one on windows for powershell scripts and the other on ubuntu for the other code, clone this git repo to both servers.
 
+#### Observium Server
+cd into /opt/Guckmon after running the chef cookbook
+
+configure the observiumconfig.php file to suit
+
+cd into bash and run install-observium.sh as sudo
+
 #### Notes
 
 This is still in development, running it in production is probably a bad idea, but heh - go for it if you really want.
