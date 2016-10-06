@@ -1,0 +1,5 @@
+
+because I am too lazy and want standard servers
+https://www.digitalocean.com/community/tutorial_series/getting-started-managing-your-infrastructure-using-chef
+
+
