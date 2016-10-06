@@ -57,18 +57,12 @@ cookbook_file "/etc/update-motd.d/10-help-text" do
   mode "755"
 end
 
-bash 'updatemotdfile' do
-	user "root"
-	command "chmod +x /etc/update-motd.d/10-help-text"
+cookbook_file "/tmp/setup.sh" do
+  source "setup.sh"
+  mode 0755
 end
 
-bash 'mkdirforgit' do
+execute 'Run Bash Commands' do
 	user "root"
-	command "mkdir -p /opt/guckmon/"
+	command "sh /tmp/setup.sh"
 end
-
-bash 'clonerepo' do
-	user "root"
-	command "git clone https://github.com/ainsey11/Guckmon"
-end
-
