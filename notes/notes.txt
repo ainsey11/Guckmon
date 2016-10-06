@@ -1,0 +1,8 @@
+this is a random note file for my sake, just so I can keep track of things
+
+ip range = 10.1.1.50-60
+vlan 100
+
+A11-GUCKMON-FE-1 = Observium Server
+IP = 10.1.1.51
+
