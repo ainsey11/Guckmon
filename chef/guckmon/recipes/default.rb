@@ -62,3 +62,13 @@ bash 'updatemotdfile' do
 	command "chmod +x /etc/update-motd.d/10-help-text"
 end
 
+bash 'mkdirforgit' do
+	user "root"
+	command "mkdir -p /opt/guckmon/"
+end
+
+bash 'clonerepo' do
+	user "root"
+	command "git clone https://github.com/ainsey11/Guckmon"
+end
+
