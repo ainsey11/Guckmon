@@ -1,5 +1,7 @@
  Import-Module ActiveDirectory
- $Serverlist = Get-ADComputer -Filter {(Operatingsystem -Like "Windows Server*") -And (Enabled -eq "True") -And (LastLogonDate -gt $cutoffdate)} | foreach { $_.Name }
+$today = Get-Date
+$cutoffdate = $today.AddDays(-10)
+$Serverlist = Get-ADComputer -Filter {(Operatingsystem -Like "Windows Server*") -And (Enabled -eq "True") -And (LastLogonDate -gt $cutoffdate)} | foreach { $_.Name }
 
  foreach ($server in $Serverlist){
 
@@ -16,7 +18,7 @@
 
  If ($check.Installed -ne "True") {
  #Install/Enable SNMP-Service
- Write-Host "SNMP Service Installing..."
+ Write-Host "SNMP Service Installing... on $env:computername"
  Get-WindowsFeature -name SNMP* | Add-WindowsFeature -IncludeManagementTools | Out-Null
  }
 
@@ -24,7 +26,7 @@
 
  ##Verify Windows Services Are Enabled
  If ($check.Installed -eq "True"){
- Write-Host "Configuring SNMP Services..."
+ Write-Host "Configuring SNMP Services... on $env:computername"
  #Set SNMP Permitted Manager(s) ** WARNING : This will over write current settings **
  reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\PermittedManagers" /v 1 /t REG_SZ /d localhost /f | Out-Null
 
