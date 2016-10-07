@@ -2,6 +2,7 @@ apt-get install libapache2-mod-php7.0 php7.0-cli php7.0-mysql php7.0-mysqli php7
 php-pear snmp fping mysql-server mysql-client python-mysqldb rrdtool subversion whois mtr-tiny ipmitool \
 graphviz imagemagick apache2
 rm -rf /opt/observium
+rm -rf /opt/*.tar.gz
 mkdir -p /opt/observium && cd /opt
 
 

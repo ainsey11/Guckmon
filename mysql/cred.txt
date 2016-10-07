@@ -1,0 +1,2 @@
+CREATE DATABASE observium DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+create user 'observium'@'%' identified by 'observer15th3b055'
