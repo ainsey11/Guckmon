@@ -52,23 +52,28 @@ package 'git-core' do
         action :install
 end
 
+package 'upstart' do
+        action :install
+end
+
 cookbook_file "/etc/update-motd.d/10-help-text" do
   source "10-help-text"
   mode "755"
 end
 
-cookbook_file "/tmp/setup.sh" do
+cookbook_file "/opt/setup.sh" do
   source "setup.sh"
   mode 0755
 end
 
 execute 'Run Bash Commands' do
 	user "root"
-	command "sh /tmp/setup.sh"
+	command "bash /opt/setup.sh"
 end
 
 cookbook_file "/etc/init/chef.conf" do
-	source "chef.conf"
-	mode "755"
+        source "chef.conf"
+        mode "755"
 end
+
 
