@@ -1,8 +1,18 @@
+
+#sets permissions on motd
 chmod +x /etc/update-motd.d/10-help-text
-chmod +x /etc/update-motd.d/10-help-text
+
+#makes right dir
 mkdir -p /opt/
+
+#changes into new dir
 cd /opt/
+
+#gets latest copy of my github repo
 git clone https://github.com/ainsey11/Guckmon
+
+
+#creates a swapfile if there isnt one
 
 # size of swapfile in megabytes
 swapsize=2048
@@ -26,5 +36,10 @@ fi
 cat /proc/swaps
 cat /proc/meminfo | grep Swap
 
+
+#enable chef-client on startup
+sed -i '13s/.*/^Cef-client -i  1800 /' /etc/rc.local
+
+# runs updates, for the sake of being tidy
 sudo apt-get update -y
 sudo apt-get upgrade -y
