@@ -66,11 +66,8 @@ cookbook_file "/opt/setup.sh" do
   mode 0755
 end
 
-cookbook_file "/etc/init.d/chef.sh" do
-        source "chef.sh"
-        mode "755"
-end
 execute 'run bash Commands' do
         user "root"
         command "bash /opt/setup.sh"
 end
+
