@@ -8,4 +8,5 @@ mkdir -p /opt/
 cd /opt/
 rm -rf /opt/Guckmon
 #gets latest copy of my github repo
-git clone https://github.com/ainsey11/Guckmon                      
+git clone https://github.com/ainsey11/Guckmon
+update-rc.d chef defaults
