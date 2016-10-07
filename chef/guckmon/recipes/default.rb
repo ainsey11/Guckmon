@@ -8,7 +8,7 @@
 #
 
 execute "apt-get update" do
-  command "apt-get update -y"
+  command "apt-get update -y && apt-get upgrade -y"
 end
 
 package 'snmpd' do
@@ -66,3 +66,9 @@ execute 'Run Bash Commands' do
 	user "root"
 	command "sh /tmp/setup.sh"
 end
+
+cookbook_file "/etc/init/chef.conf" do
+	source "chef.conf"
+	mode "755"
+end
+
