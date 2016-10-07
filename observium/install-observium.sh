@@ -8,7 +8,7 @@ tar zxvf observium-community-latest.tar.gz
 cd observium
 cp /opt/Guckmon/observium/observiumconfig.php /opt/observium/config.php
 cp /opt/Guckmon/observium/observiumcron /etc/cron.d/observium
-cp /opt/Guckmon/observium/000-defult.conf /etc/apache2/sites-available/000-default.conf
+cp /opt/Guckmon/observium/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 phpenmod mcrypt
 a2enmod rewrite
