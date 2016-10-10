@@ -5,3 +5,5 @@ apt-get update
 apt-get install influxdb
 service influxdb start
 influxd config > /etc/influxdb/influxdb.generated.conf
+influxd -config /etc/influxdb/influxdb.generated.conf
+
