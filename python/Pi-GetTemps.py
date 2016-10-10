@@ -21,10 +21,11 @@ while True:
 
         sensor5 = W1ThermSensor(W1ThermSensor.THERM_SENSOR_DS18B20, "031501c1e1ff")
         sensor5_val = sensor5.get_temperature()
+
 print("posting data")
 
 
-        sensor1_json_body =[
+sensor1_json_body =[
         {
             "name" : "sensor1_temp_c",
             "columns" : ["value", "sensor"],
@@ -34,8 +35,8 @@ print("posting data")
           }
         ]
 
-        sensor2_json_body =[
-          {
+sensor2_json_body =[
+        {
             "name" : "sensor2_temp_c",
             "columns" : ["value", "sensor"],
             "points" : [
@@ -44,7 +45,7 @@ print("posting data")
           }
         ]
 
-        sensor3_json_body =[
+sensor3_json_body =[
           {
             "name" : "sensor3_temp_c",
             "columns" : ["value", "sensor"],
@@ -54,7 +55,7 @@ print("posting data")
           }
         ]
 
-        sensor4_json_body =[
+sensor4_json_body =[
           {
             "name" : "sensor4_temp_c",
             "columns" : ["value", "sensor"],
@@ -64,7 +65,7 @@ print("posting data")
           }
         ]
 
-        sensor5_json_body =[
+sensor5_json_body =[
           {
             "name" : "sensor5_temp_c",
             "columns" : ["value", "sensor"],
@@ -75,18 +76,18 @@ print("posting data")
         ]
 
 
-        client = InfluxDBClient('10.1.1.52', 8086, 'root', 'root', 'guckmon1')
-        client.write_points(sensor1_json_body)
-        client.write_points(sensor2_json_body)
-        client.write_points(sensor3_json_body)
-        client.write_points(sensor4_json_body)
-        client.write_points(sensor5_json_body)
-        print(sensor1_val)
-        print(sensor2_val)
-        print(sensor3_val)
-        print(sensor4_val)
-        print(sensor5_val)
-        print(sensor5_json_body)
-        time.sleep(2)
+client = InfluxDBClient('10.1.1.52', 8086, 'root', 'root', 'guckmon1')
+client.write_points(sensor1_json_body)
+client.write_points(sensor2_json_body)
+client.write_points(sensor3_json_body)
+client.write_points(sensor4_json_body)
+client.write_points(sensor5_json_body)
+print(sensor1_val)
+print(sensor2_val)
+print(sensor3_val)
+print(sensor4_val)
+print(sensor5_val)
+print(sensor5_json_body)
+time.sleep(2)
 
 
