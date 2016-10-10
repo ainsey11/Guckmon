@@ -1,1 +1,3 @@
-apt-get install python python-pip python-influxdb
+apt-get install python python-pip
+pip install influxdb
+
