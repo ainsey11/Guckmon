@@ -27,6 +27,7 @@ while True:
 			"measurement": "ShedTemp",
 			"tags": {
 				"Sensor": "1",
+				"geohash": "55.378051, -3.435973",
 					},
 			"fields": {
 				"Temperature": sensor1_val
@@ -38,6 +39,7 @@ while True:
 			"measurement": "ShedTemp",
 			"tags": {
 				"Sensor": "2",
+				"geohash": "55.378051, -3.435973",
 					},
 			"fields": {
 				"Temperature": sensor2_val
@@ -50,6 +52,7 @@ while True:
 			"measurement": "ShedTemp",
 			"tags": {
 				"Sensor": "3",
+				"geohash": "55.378051, -3.435973",
 					},
 			"fields": {
 				"Temperature": sensor3_val
@@ -61,6 +64,7 @@ while True:
 			"measurement": "ShedTemp",
 			"tags": {
 				"Sensor": "4",
+				"geohash": "55.378051, -3.435973",
 					},
 			"fields": {
 				"Temperature": sensor4_val
@@ -73,6 +77,7 @@ while True:
 			"measurement": "ShedTemp",
 			"tags": {
 				"Sensor": "5",
+				"geohash": "55.378051, -3.435973",
 					},
 			"fields": {
 				"Temperature": sensor5_val
