@@ -4,7 +4,7 @@ from w1thermsensor import W1ThermSensor
 import os
 import time
 from influxdb import InfluxDBClient
-while true:
+while True:
 	sensor1 = W1ThermSensor(W1ThermSensor.THERM_SENSOR_DS18B20, "041501a634ff")
 	sensor1_val = sensor1.get_temperature(W1ThermSensor.DEGREES_C)
 
