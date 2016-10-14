@@ -10,6 +10,7 @@ PDU1Usage = PDU1Usage.replace("\n","")
 PDU2Usage= PDU2Usage.replace("\n","")
 
 
+
 PDU1Usagejson = [
 {
         "measurement": "PDUUsage",
